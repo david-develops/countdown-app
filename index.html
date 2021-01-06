@@ -6,7 +6,8 @@
         <title>Countdown Timer - davidhalldevelops.com</title>
         <!--External CSS-->
         <link rel="stylesheet" href="style.css">
-        <!--External Javascript-->
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="countdown.js"></script>
         <!-- Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -17,13 +18,33 @@
     </head>
     <body>
         <header>
-            <h3><a href="index.html"><span class="material-icons">home</span></a></h3>
+            <h3 id="home-btn"><a href="index.html"><span id="home-btn-icon" class="material-icons">home</span></a></h3>
+            <h1>Countdown Timer</h1>
+            <h4>Create your own timers to count down the time!</h4>
         </header>
         <main>
-
+            <div id="new-timer-btn" class="timer-card">
+                <span id="add-timer-btn" class="material-icons">add</span>
+                <h3>Add a countdown</h3>
+            </div>
+            </div>
         </main>
         <footer>
 
         </footer>
+        <div id="overlay">
+            <div id="modal">
+                <h1>New Countdown</h1>
+                <form >
+                    <label for="timer-name">Timer Name : </label>
+                    <input type="text" id="timer-name" name="timer-name"><br>
+                    <label for="timer-end-date">End Date : </label>
+                    <input type="text" name="timer-end-date" id="timer-end-date"><br>
+                    <label for="timer-end-time">End Time : </label>
+                    <input type="text" name="timer-end-time" id="timer-end-time"><br>
+                    <button>Create Countdown</button>
+                </form>
+            </div>
+
     </body>
 </html>
