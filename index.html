@@ -23,28 +23,33 @@
             <h4>Create your own timers to count down the time!</h4>
         </header>
         <main>
+            <!-- countdown timers -->
             <div id="new-timer-btn" class="timer-card">
                 <span id="add-timer-btn" class="material-icons">add</span>
-                <h3>Add a countdown</h3>
-            </div>
+                <h1>Add a countdown</h1>
             </div>
         </main>
         <footer>
 
         </footer>
+        <!-- overlay and modals -->
         <div id="overlay">
-            <div id="modal">
+            <div class="modal" id="create-modal">
                 <h1>New Countdown</h1>
+                <span class="close-modal-btn">X</span>
                 <form >
                     <label for="timer-name">Timer Name : </label>
                     <input type="text" id="timer-name" name="timer-name"><br>
                     <label for="timer-end-date">End Date : </label>
-                    <input type="text" name="timer-end-date" id="timer-end-date"><br>
+                    <input type="date" name="timer-end-date" id="timer-end-date"><br>
                     <label for="timer-end-time">End Time : </label>
-                    <input type="text" name="timer-end-time" id="timer-end-time"><br>
-                    <button>Create Countdown</button>
+                    <input type="time" name="timer-end-time" id="timer-end-time"><br>
+                    <button id="create-btn">Create Countdown</button>
                 </form>
             </div>
-
+            <div class="modal" id="show-modal">
+                <span class="close-modal-btn">X</span>
+            </div>
+        </div>
     </body>
 </html>
