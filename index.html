@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+
+<!-- TODO
+    -Save timers between visits to page
+-->
+
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -19,14 +26,16 @@
     <body>
         <header>
             <h3 id="home-btn"><a href="index.html"><span id="home-btn-icon" class="material-icons">home</span></a></h3>
-            <h1>Countdown Timer</h1>
-            <h4>Create your own timers to count down the time!</h4>
+            <div id="header-text-wrap">
+                <h1>Countdown Timer</h1>
+                <h4>Create your own timers to count down the time!</h4>    
+            </div>
         </header>
         <main>
             <!-- countdown timers -->
-            <div id="new-timer-btn" class="timer-card">
+            <div id="new-timer-btn">
                 <span id="add-timer-btn" class="material-icons">add</span>
-                <h3>Add a countdown</h3>
+                <h4>Add a countdown</h4>
             </div>
         </main>
         <footer>

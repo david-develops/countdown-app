@@ -3,26 +3,39 @@
     margin: 0;
 }
 body{
-    background-color: #4c15e4;
+    background-color: #8da46a;
     font-family: 'Roboto', monospace;
 }
 header{
-    background-color: dimgray;
+    background-color: #314333;
+    color: white;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-columns: 5% 95%;
     text-align: center;
     min-height: 125px;
     align-items: center;
 }
+#header-text-wrap{
+    width: 80%;
+    margin-left: 85px;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+#header-text-wrap>h1{
+    font-size: 2.5em;
+}
 #home-btn{
-    position: absolute;
-    padding: 7.5px;
+    cursor: pointer;
+    background-color: #8da46a;
+    border-radius: 10px;
+    border: 2px solid black;
 }
 #home-btn-icon{
-    font-size: 36px;
+    font-size: 48px;
+    color: black;
 }
 main{
-    background-color: #651ff0;
+    background-color: rgb(204, 204, 170);
     margin: 25px auto 0 auto;
     padding: 10px 10px 0px 10px;
     min-height: 400px;
@@ -30,31 +43,44 @@ main{
     display: grid;
     grid-template-columns: repeat(5,auto);
     justify-items: center;
+    border: 12px solid #45614b;
+    border-radius: 15px;
+}
+#new-timer-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 125px;
+    width: 125px; 
+    padding: 2.5px;  
+    border-radius: 75px;
+    background-color: rgba(51, 255, 51, .55);
     border: 2px solid black;
+    display: grid;
+    text-align: center;
+    cursor: pointer;
 }
 .timer-card{
+    background-color: rgba(51, 255, 51, .55);
     align-items: center;
     margin: 8px 6px;
     border: 2px solid black;
-    border-radius: 100px;
+    border-radius: 35px;
     height: 150px;
     width: 150px;
     text-align: center;
     cursor: pointer;
     overflow: hidden;
     display: grid;
-    align-items: center;
-    justify-items: center;
-}
-.timer-name{
-    max-height: 75px;
+    grid-template-rows: 80% 30%;
     overflow: hidden;
 }
 #add-timer-btn{
     font-size: 48px;
+    align-self: center;
 }
 #overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -67,10 +93,10 @@ main{
 .modal{
     display: none;
     width: 50%;
-    position: absolute;
+    position: fixed;
     top: 25%;
     left: 30%;
-    background-color: #9167ec;
+    background-color: #45614b;
     border: 2px solid black;
     max-width: 500px;
     max-height: 400px;
@@ -97,6 +123,33 @@ input{
 button{
     padding: 10px;
     margin: 10px;
+}
+.timer-name-display{
+    background-color: #8da46a;
+    padding-top: 2px;
+    text-align: center;
+    max-height: 50px;
+}
+.timer-display{
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+#delete-timer-small{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    color: white;
+    border-radius: 50px;
+}
+#delete-timer-large{
+    border: 1px solid black;
+    height: 100%;
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }
 footer{
     height: 200px;

@@ -3,8 +3,8 @@ $(document).ready(function(){
     var name;
     var date;
     var time;
-    var timeLeft;
     var dateTime;
+    var timeLeft;
     //display create-modal which allows user to create new countdown
     $("#new-timer-btn").click(function(){
         $("#overlay").show();
@@ -41,7 +41,7 @@ $(document).ready(function(){
             $("#show-modal").show();
 
             //add elements to hold name, display time left, and delete button
-            $("#show-modal").append("<h1>"+name+"</h1><br><h1 class='timer-display'>Loading...</h1><br><h1 class='delete-timer-btn'>Delete</h1>");
+            $("#show-modal").append("<h1 class='timer-name-display'>"+name+"</h1><h1 class='timer-display'>Loading...</h1>");
 
             //following function creates and updates time remaining every second
             countdownTime=$(this).attr("value");
@@ -51,20 +51,23 @@ $(document).ready(function(){
                 //reset text to new time left string
                 $("#show-modal .timer-display").text(timeLeft);
             },1000);
-            function getCountdownTime(countdownTime){
-                //get current time
-                var curTime = new Date().getTime();
-                //get difference
-                var diff = countdownTime - curTime;
-                //get values for day hours minutes and seconds from result
-                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                //return countdown timer as string
-                return ""+days+"d"+hours+"h"+minutes+"m"+seconds+"s";
-            }
         });
+        $(".delete-timer-btn").off("click").on("click",function(){
+            $(this).parent(".timer").remove();
+        })
+        function getCountdownTime(countdownTime){
+            //get current time
+            var curTime = new Date().getTime();
+            //get difference
+            var diff = countdownTime - curTime;
+            //get values for day hours minutes and seconds from result
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            //return countdown timer as string
+            return ""+days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+        }
         function createCountdown(){
             //store timer name, date, and time from user input
             name=$("#timer-name").val();
@@ -77,7 +80,7 @@ $(document).ready(function(){
             var countdownTime = new Date(dateTime).getTime();//add this to div to be used when showing actual countdown in modal
             
             //Append new display for countdown to main
-            $("main").append("<div value="+countdownTime+" class='timer-card timer'><h1 class='timer-name'>"+name+"</h1><h3 class='delete-timer-btn'>Delete</h1></div>");
+            $("main").append("<div value="+countdownTime+" class='timer-card timer'><h1 class='timer-name'>"+name+"</h1><h3 id='delete-timer-small' class='delete-timer-btn'>Delete</h1></div>");
             }
     });
 });
