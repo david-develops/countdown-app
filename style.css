@@ -69,11 +69,13 @@ main{
     height: 150px;
     width: 150px;
     text-align: center;
-    cursor: pointer;
     overflow: hidden;
     display: grid;
     grid-template-rows: 80% 30%;
     overflow: hidden;
+}
+.timer-name{
+    cursor: pointer;
 }
 #add-timer-btn{
     font-size: 48px;
@@ -132,6 +134,7 @@ button{
 }
 .timer-display{
     background-color: white;
+    border: 2px solid black;
     width: 50%;
     margin: auto;
     margin-top: 50px;
@@ -143,12 +146,6 @@ button{
     background-color: red;
     color: white;
     border-radius: 50px;
-}
-#delete-timer-large{
-    border: 1px solid black;
-    height: 100%;
-    background-color: red;
-    color: white;
     cursor: pointer;
 }
 footer{
