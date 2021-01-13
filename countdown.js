@@ -1,8 +1,3 @@
-/*
-++++
- Need to make loaded timers (from localStorage are clickable) and make delete remove timers from localStorage
-++++
-*/
 $(document).ready(function(){
     alert("Make me mobile friendly for the smallest of screens now!");
     //Variables used to hold name and time of timer currently being used
