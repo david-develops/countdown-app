@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    alert("Make me mobile friendly for the smallest of screens now!");
     //Variables used to hold name and time of timer currently being used
     var name;
     var date;
